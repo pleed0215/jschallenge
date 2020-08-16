@@ -1,0 +1,265 @@
+body {
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  transition: color 0.5 ease-in-out;
+  font-family: "TmoneyRound";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  border-radius: 30px;
+  margin-top: 10vh;
+  align-items: center;
+}
+
+input[type="text"] {
+  font-family: "TmoneyRound";
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: 2px white solid;
+  color: gray;
+}
+
+.js-clock {
+  align-self: center;
+}
+
+@font-face {
+  font-family: "TmoneyRound";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+  .js-clock h1 {
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+    font-size: 140px;
+    font-weight: 600;
+    font-family: "TmoneyRound";
+  }
+  .js-greetings {
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+    font-size: 60px;
+    color: white;
+    margin-top: 20px;
+    font-family: "TmoneyRound";
+  }
+  .js-weather {
+    font-size: 50px;
+    font-family: "TmoneyRound";
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h5 {
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-family: "TmoneyRound";
+  }
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+  .js-clock h1 {
+    font-size: 140px;
+    font-weight: 600;
+    font-family: "TmoneyRound";
+  }
+  .js-weather {
+    font-size: 50px;
+    font-family: "TmoneyRound";
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .js-greetings {
+    font-size: 60px;
+    color: white;
+    margin-top: 20px;
+    font-family: "TmoneyRound";
+  }
+  h5 {
+    font-size: 30px;
+    color: #6c5ce7;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-family: "TmoneyRound";
+  }
+}
+
+.js-form {
+  color: white;
+}
+
+.form {
+  width: 50%;
+  height: 50px;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+  color: white;
+  font-size: 10;
+  font: bold;
+}
+
+.font-type {
+  font-size: 15;
+  font: bold;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  animation: fadeIn 0.5s linear;
+  background-size: cover;
+  background-position: center;
+}
+
+h5 {
+  font-size: 30px;
+  color: #6c5ce7;
+  font-style: italic;
+}
+
+.name-input,
+.list-input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+input::placeholder {
+  font-size: 20px;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.js-todoForm {
+  width: 50%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.todo-container {
+  width: 80%;
+  min-height: 300px;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(200, 200, 200, 0.6);
+  padding: 10px;
+}
+
+.seperator {
+  height: 100%;
+  border: 1px white solid;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.pending-container,
+.complete-container {
+  width: 100%;
+  min-height: 300px;
+  max-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.pending-container li:hover,
+.complete-container li:hover {
+  background-color: rgba(140, 140, 140, 0.8);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.pending-container li,
+.complete-container li {
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  align-items: center;
+}
+
+.pending-container ul,
+.complete-container ul {
+  overflow-y: scroll;
+}
+
+.complete-container ul {
+  text-decoration: line-through;
+}
+.pending-container p,
+.complete-container p {
+  font-size: 20px;
+  font-weight: 600px;
+  display: flex;
+  align-items: center;
+  font-family: "TmoneyRound";
+}
+
+.pending-container i,
+.complete-container i {
+  margin-left: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+}
+
+.pending-container i:hover,
+.complete-container i:hover {
+  border-radius: 50%;
+
+  background-color: rgba(250, 0, 0, 0.7);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.pending-container h1:not(:last-child),
+.complete-container h1:not(:last-child) {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}

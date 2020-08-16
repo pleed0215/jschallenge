@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clone_obj (obj) {
+            var output = {};
+            for (var i in obj) {
+                output[i] = obj[i];
+            }
+            return output
+        }
+    </script>
+</head>
+<body>
+    <script>
+        window.onload = () => {
+            function Rectangle(w, h) {
+                var width = w;
+                var height = h;
+
+                this.getWidth = () => width;
+                this.getHeight = () => height;
+                
+                this.setWidth = (w) => {
+                    if (w<0) throw 'width cannot be negative number.';
+                    else width = w;
+                };
+                this.setHeight = (h) => {
+                    if (h<0) throw 'width cannot be negative number.';
+                    else height = h;
+                };
+            }
+
+            function Square(l) {
+                this.base = Rectangle;
+                this.base(l,l);
+            }
+
+            Rectangle.prototype.getArea = function ()  {
+                return this.getWidth()*this.getHeight();
+            };
+
+            Square.prototype = Rectangle.prototype;
+            Square.prototype.constructor = Square;
+
+            var rect = new Rectangle (5, 7);
+            var s_rect = new Square(10);
+            
+            var primitiveNumber = 273;
+            var objectNumber = Number(273);
+
+            /*
+            primitiveNumber.method = function () { 
+                return 'Primitive Method';
+            };
+            */
+
+            Number.prototype.method = function () {
+                return 'Method on Prototype';
+            }
+
+            alert (primitiveNumber.method());
+
+        }
+    </script>
+</body>
+</html>
