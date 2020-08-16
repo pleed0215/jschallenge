@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="clock.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/3e52747b95.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="js-clock">
+        <h1>00:00</h1>
+      </div>
+      <form action="" class="js-form form">
+        <input
+          class="name-input"
+          type="text"
+          placeholder="What is your name?"
+        />
+      </form>
+      <h4 class="js-greetings greetings"></h4>
+      <h4 class="js-weather"></h4>
+
+      <h5 class="">What's your things to do?</h5>
+
+      <form action="" class="js-todoForm">
+        <input
+          class="list-input"
+          type="text"
+          placeholder="Write what you to do."
+        />
+      </form>
+      <div class="todo-container">
+        <div class="pending-container">
+          <h1>Pending</h1>
+          <ul class="js-todoList font-type"></ul>
+        </div>
+        <div class="seperator"></div>
+        <div class="complete-container">
+          <h1>Completed</h1>
+          <ul class="js-completeList font-type"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="whether.js"></script>
+  </body>
+</html>
